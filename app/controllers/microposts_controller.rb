@@ -20,6 +20,13 @@ class MicropostsController < ApplicationController
     flash[:success] = 'メッセージを削除しました。'
     redirect_back(fallback_location: root_path)
   end
+  
+  # def favorite
+  #   @micropost.favorite
+  #   flash[:success] = 'メッセージをお気に入りにしました。'
+  #   redirect_back(fallback_location: root_path)
+  # end  
+    
 
   private
 
