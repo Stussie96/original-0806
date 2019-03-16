@@ -19,4 +19,9 @@
     </ul>
     <%= render 'microposts/microposts', microposts: @microposts %>
   </div>
+  <% if @user.image? %>
+　　<%= image_tag @user.image.thumb.url %>
+　<% else %>
+　　<%= image_tag 'noimage.gif' %>
+　<% end %>
 </div>
