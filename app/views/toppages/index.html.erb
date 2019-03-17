@@ -2,12 +2,16 @@
   <div class="row">
     <aside class="col-md-4">
       <%= form_for(@micropost) do |f| %>
+
+　　  <%= f.text_field :content %>
+　　  <%= f.file_field :content %>
+
+      
         <div class="form-group">
-          <%= f.text_area :content, class: 'form-control', rows: 5 %>
-          <%= f.file_area :image, class: 'form-control', rows: 5 %>
+        <%= f.text_area :content, class: 'form-control', rows: 5 %>
         </div>
         <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
-      <% end %>
+        <% end %>
     </aside>
     <div class="col-xs-8">
       <%= render 'microposts/microposts', microposts: @microposts %>
@@ -16,8 +20,9 @@
 <% else %>
   <div class="center jumbotron">
     <div class="text-center">
-      <h1>Welcome to the Microposts</h1>
+      <h1>Welcome to the Photolist</h1>
       <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
     </div>
+  </div>
   </div>
 <% end %>

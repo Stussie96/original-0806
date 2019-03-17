@@ -2,5 +2,5 @@ class Micropost < ApplicationRecord
   belongs_to :user
 
   validates :content, presence: true, length: { maximum: 255 }
-  mount_uploader :image, Imageuploader
+  mount_uploader :image, ImageUploader
 end
