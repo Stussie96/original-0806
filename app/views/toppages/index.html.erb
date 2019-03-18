@@ -3,11 +3,12 @@
     <aside class="col-md-4">
       <%= form_for(@micropost) do |f| %>
 
-　　  <%= f.text_field :content %>
-　　  <%= f.file_field :content %>
+      <%= f.label :image, "画像指定" %>
+　　  <%= f.file_field :image %>
 
       
         <div class="form-group">
+        <%= f.label :content, "文字入力" %>
         <%= f.text_area :content, class: 'form-control', rows: 5 %>
         </div>
         <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>

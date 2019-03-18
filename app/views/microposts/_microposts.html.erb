@@ -3,7 +3,9 @@
   
          <%= micropost.content %>
          <div class="imagearea">
-          <%= image_tag 'microposts.image', class:"img-responsive" %>
+           <% if micropost.image.url != nil %>
+            <%= image_tag micropost.image.url, class:"img-responsive" %>
+           <% end %>
          </div>
         <div>
     <li class="media">
