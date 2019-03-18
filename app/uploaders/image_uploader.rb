@@ -2,12 +2,7 @@
 
 class ImageUploader < CarrierWave::Uploader::Base  
   
-  if (Rails.env == "development")
-    storage :file
-  else 
-     # heroku cloudinary用のinclude設定
-     include Cloudinary::CarrierWave
-  end
+  storage :file
   
   
   def store_dir
