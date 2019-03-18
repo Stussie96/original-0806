@@ -58,7 +58,4 @@ end
 gem 'carrierwave'
 gem 'rmagick', '~>2.16'
 
-group :production do
-  gem 'pg', '0.21.0'
-  gem 'cloudinary'
-end
+
